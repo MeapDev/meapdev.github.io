@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Meap opensource</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meap - Мессенджер</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <!-- Auth Screen -->
+    <div id="authScreen" class="auth-screen active">
+      <div class="auth-container">
+        <div class="auth-header">
+          <h1>💬 Meap</h1>
+          <p class="subtitle">Общение в реальном времени, но <b><u><i>упрощенно</u></b></i>.</p>
+        </div>
+
+        <div id="authForms">
+          <!-- Login Form -->
+          <div id="loginForm" class="auth-form active">
+            <h2>Вход</h2>
+            <input type="text" id="loginUsername" placeholder="Введите ваше имя" class="input-field">
+            <input type="password" id="loginPassword" placeholder="Введите пароль" class="input-field">
+            <button id="loginBtn" class="btn-primary">Вход</button>
+            <div id="loginError" class="error-msg"></div>
+            <button id="switchToRegister" class="btn-secondary">Создать аккаунт</button>
+          </div>
+
+          <!-- Register Form -->
+          <div id="registerForm" class="auth-form">
+            <h2>Регистрация</h2>
+            <input type="text" id="regUsername" placeholder="Введите имя пользователя" class="input-field">
+            <input type="email" id="regEmail" placeholder="Введите email" class="input-field">
+            <input type="password" id="regPassword" placeholder="Введите пароль" class="input-field">
+            <input type="password" id="regPassword2" placeholder="Повторите пароль" class="input-field">
+            <button id="registerBtn" class="btn-primary">Зарегистрироваться</button>
+            <div id="registerError" class="error-msg"></div>
+            <button id="switchToLogin" class="btn-secondary">Вернуться к входу</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Screen -->
+    <div id="chatScreen" class="chat-screen">
+      <div class="chat-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <div class="sidebar-header">
+            <h2>Meap</h2>
+            <button id="logoutBtn" class="btn-logout">Выход</button>
+          </div>
+
+          <!-- Tabs for switching between conversations and friends -->
+          <div class="sidebar-tabs">
+            <button class="tab-btn active" data-tab="conversations">Чаты</button>
+            <button class="tab-btn" data-tab="friends">Друзья</button>
+            <button class="tab-btn" data-tab="find-friends">Найти</button>
+          </div>
+
+          <!-- Conversations Tab -->
+          <div id="conversations-tab" class="tab-content active">
+            <div class="conversations-list" id="conversationsList">
+              <!-- Conversations will be added here -->
+            </div>
+            <div class="sidebar-footer">
+              <button id="newChatBtn" class="btn-new-chat">+ Новый чат</button>
+            </div>
+          </div>
+
+          <!-- Friends Tab -->
+          <div id="friends-tab" class="tab-content">
+            <div class="friends-section">
+              <h3>Мои друзья</h3>
+              <div class="friends-list" id="friendsList">
+                <!-- Friends will be added here -->
+              </div>
+            </div>
+            <div class="friends-section">
+              <h3>Запросы в друзья</h3>
+              <div class="friend-requests-list" id="friendRequestsList">
+                <!-- Friend requests will be added here -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Find Friends Tab -->
+          <div id="find-friends-tab" class="tab-content">
+            <div class="find-friends-section">
+              <input type="text" id="searchUsersInput" placeholder="Поиск пользователя..." class="search-input">
+              <div class="search-results" id="searchResults">
+                <!-- Search results will be added here -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="chat-main">
+          <div class="chat-header">
+            <div class="chat-title" id="chatTitle">Выберите чат</div>
+            <div class="chat-info">
+              <span id="userStatus" class="status-online">Online</span>
+            </div>
+          </div>
+
+          <div class="messages-container" id="messagesContainer">
+            <!-- Messages will be displayed here -->
+          </div>
+
+          <div class="message-input-area">
+            <div class="input-wrapper">
+              <textarea id="messageInput" placeholder="Введите сообщение..." class="message-input"></textarea>
+              < id="sendBtn" class="btn-send">Отправить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
+<script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
